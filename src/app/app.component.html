@@ -1,3 +1,10 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12" id="search-input-component">
+      <search-input (searchEventEmitter) = "runSearch($event)"></search-input>
+    </div>
+  </div>
+  <div class="row" *ngFor="let ship of ships">
+      <ship-details [ship]="ship"></ship-details>
+  </div>
+  </div>

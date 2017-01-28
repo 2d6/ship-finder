@@ -1,0 +1,32 @@
+<div class="col-xs-8">
+  <div class="panel panel-default" *ngIf="ship">
+    <div class="panel-heading">
+      {{ship.name}}
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <div class="row">
+          <div class="col-xs-4">
+            <strong>Model</strong>
+          </div>
+          <div class="col-xs-8">
+            {{ship.model}}
+          </div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <div class="col-xs-4">
+            <strong>Manufacturer</strong>
+          </div>
+          <div class="col-xs-8">
+            {{ship.manufacturer}}
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="col-xs-4" *ngIf="ship && pilots">
+  <pilot-details [pilots]="pilots"></pilot-details>
+</div>

@@ -1,0 +1,8 @@
+<div class="panel panel-default" *ngIf="pilots.length > 0">
+  <div class="panel-heading">
+    Known pilots
+  </div>
+  <div class="list-group">
+    <li class="list-group-item" *ngFor="let pilot of pilots">{{pilot.name}}</li>
+  </div>
+</div>
